@@ -6,6 +6,12 @@
   <link rel="stylesheet" type="text/css" href="lib/lungo/lungo.css" media="all" />
   <link rel="stylesheet" type="text/css" href="lib/lungo/lungo.icon.css" media="all" />
   <link rel="stylesheet" type="text/css" href="lib/lungo/lungo.theme.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/streetpay.css" media="all" />
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <!--<meta http-equiv="cleartype" content="on">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body class="app">
     <section id="main" data-transition="">
@@ -31,16 +37,54 @@
             </nav>
         </footer>
 
-        <article id="descriptionArticle" class="active list indented scroll">
+        <article id="descriptionArticle" class="indented scroll">
 
-            description
+        	<h1>Hermenegildo</h1>
+
+            <img id="project-img" src="http://musician.jpg.to/"></img>
+
+            <p id="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         </article>
 
-        <article id="payArticle" class="list indented scroll">
+        <article id="payArticle" class="list active indented scroll">
 
-            pay
-
+            <h1>Contribute to this project</h1>
+			<ul>
+            	<li class="form">
+                    <a id="plusButton" style="margin-left:10px;" class="button right accept" style="font-weight: bold"
+                        data-action="presence">+</a>
+                    <a id="minusButton" style="margin-left:10px;" class="button cancel right" style="font-weight: bold"
+                        data-action="presence">-</a>
+		            <fieldset>
+                    	<strong><input id="moneyInput" type="text" value="3.14€"></input></strong>
+                    </fieldset>
+	            </li>
+	            <li class="form">
+					<fieldset>
+						<label>name*</label>
+						<input id="nameInput" type="text" placeholder="name"></input>
+					</fieldset>
+	            </li>
+	            <li class="form">
+	            	<strong>Avatar</strong><br/>
+	            	<a id="searchButton" style="margin-left:10px;" class="button right" style="font-weight: bold"
+                        data-action="presence">search</a>
+	            	<fieldset>
+	            		<label>email/nick</label>
+						<input id="emailInput" type="text" placeholder="email o nick"></input>
+	            	</fieldset>
+	            	<fieldset>
+	            		<img style="visibility:hidden;" src="" id="userImage"></img>
+	            	</fieldset>
+	            </li>
+	            <a class="button accept">Pledge!</a>
+            </ul>
         </article>
 
     </section>
@@ -48,6 +92,7 @@
     <!-- Lungo - Dependencies -->
     <script src="lib/quo/quo.js"></script>
     <script src="lib/lungo/lungo.js"></script>
+    <script src="lib/md5.js"></script>
     <!-- Lungo - Sandbox App -->
     <script>
         Lungo.init();
