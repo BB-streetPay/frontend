@@ -16,75 +16,70 @@
 <body class="app">
     <section id="main" data-transition="">
         
-        <header data-title="Street Pay - Project" class="extended"></header>
+        <header data-title="Street Pay - Contribute" class="extended"></header>
         
-        <!--<nav class="groupbar">
-
-            <a href="#usersArticle" data-router="article" data-icon="users" class="active"
-                data-title="Street Pay - Users">Users</a>
-
-            <a href="#editArticle" data-router="article" data-icon="pencil"
-                data-title="Street Pay - Edit">Edit</a>
-
-            <a href="#deleteArticle" data-router="article" data-icon="remove"
-                data-title="Street Pay - Delete">Delete</a>
-        </nav>-->
-        
+       
         <footer>
             <nav>
-                <a href="#descriptionArticle" data-router="article" data-icon="quote-left" class="active"></a>
-                <a href="#payArticle" data-router="article" data-icon="money"></a>
+                <a href="#contributeArticle" data-router="article" data-icon="money" class="active"
+                    data-title="Street Pay - Contribute"></a>
+                <a href="#descriptionArticle" data-router="article" data-icon="quote-left"
+                    data-title="Street Pay - Project"></a>
+                <a href="#contributionsArticle" data-router="article" data-icon="group"
+                    data-title="Street Pay - Contributions"></a>
             </nav>
         </footer>
 
-        <article id="descriptionArticle" class="indented scroll">
+        <article id="contributeArticle" class="active list indented scroll">
 
-        	<h1>Hermenegildo</h1>
+            <ul id="project-short"></ul>
 
-            <img id="project-img" src="http://musician.jpg.to/"></img>
-
-            <p id="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+            <div class="form">
+                <a id="plusButton" style="font-weight: bold"
+                    class="button right accept">+</a>
+                <a id="minusButton" style="margin-left:10px; font-weight: bold"
+                    class="button right cancel">-</a>
+                <fieldset>
+                    <label>Money*</label>
+                    <input id="paymentMoney" type="text" value="1.00€"></input>
+                </fieldset>
+                <a id="searchButton" style="margin-left:10px; margin-top:5px; font-weight: bold"
+                    class="button right">Search</a>
+                <fieldset>
+                    <label>Nick*</label>
+                    <input id="paymentNick" type="text" value="nick"></input>
+                </fieldset>
+            </div>
+            <div class="form">
+                <fieldset>
+                    <label>Image URL*:</label>
+                    <input id="paymentImageUrl" type="text" value="http://" />
+                </fieldset>
+                <fieldset>
+                    <label>Image:</label>
+                    <img id="userImage" style="visibility:hidden; margin-bottom:10px;" src="" />
+                </fieldset>
+            </div>
+                <a id="contributeButton" style="font-weight: bold; width: 99%;"
+                    class="button">Contribute!</a>
         </article>
 
-        <article id="payArticle" class="list active indented scroll">
+        <article id="descriptionArticle" class="list indented scroll">
 
-            <h1>Contribute to this project</h1>
-			<ul>
-            	<li class="form">
-                    <a id="plusButton" style="margin-left:10px;" class="button right accept" style="font-weight: bold"
-                        data-action="presence">+</a>
-                    <a id="minusButton" style="margin-left:10px;" class="button cancel right" style="font-weight: bold"
-                        data-action="presence">-</a>
-		            <fieldset>
-                    	<strong><input id="moneyInput" type="text" value="3.14€"></input></strong>
-                    </fieldset>
-	            </li>
-	            <li class="form">
-					<fieldset>
-						<label>name*</label>
-						<input id="nameInput" type="text" placeholder="name"></input>
-					</fieldset>
-	            </li>
-	            <li class="form">
-	            	<strong>Avatar</strong><br/>
-	            	<a id="searchButton" style="margin-left:10px;" class="button right" style="font-weight: bold"
-                        data-action="presence">search</a>
-	            	<fieldset>
-	            		<label>email/nick</label>
-						<input id="emailInput" type="text" placeholder="email o nick"></input>
-	            	</fieldset>
-	            	<fieldset>
-	            		<img style="visibility:hidden;" src="" id="userImage"></img>
-	            	</fieldset>
-	            </li>
-	            <a class="button accept">Pledge!</a>
-            </ul>
+            <div id="project-long"></div>
+        	
+        </article>
+
+        <article id="contributionsArticle" class="list indented scroll">
+
+            <div class="form">
+                <fieldset data-icon="search">
+                    <input type="search" placeholder="Search...">
+                </fieldset>
+            </div>
+
+            <ul id="contributions"></ul>
+            
         </article>
 
     </section>
@@ -92,11 +87,10 @@
     <!-- Lungo - Dependencies -->
     <script src="lib/quo/quo.js"></script>
     <script src="lib/lungo/lungo.js"></script>
+    <script src="lib/jquery.js"></script>
     <script src="lib/md5.js"></script>
     <!-- Lungo - Sandbox App -->
-    <script>
-        Lungo.init();
-    </script>
+
     <script src="js/util.js"></script>
 	<script src="js/project.js"></script>
 </body>

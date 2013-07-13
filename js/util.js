@@ -10,7 +10,7 @@ var sp_urlParams = {};
         query  = window.location.search.substring(1);
 
     while (match = search.exec(query)) {
-       cm_urlParams[decode(match[1])] = decode(match[2]);
+       sp_urlParams[decode(match[1])] = decode(match[2]);
     }
 })();
 
@@ -42,4 +42,4 @@ var sp_dateToString = function(date) {
 };
 
 // SERVER URL
-var sp_server_url = "http://10.71.146.127:3000";
+var sp_server_url = "http://arcane-forest-9458.herokuapp.com";
