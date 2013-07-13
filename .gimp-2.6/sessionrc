@@ -1,0 +1,78 @@
+# GIMP sessionrc
+# 
+# This file takes session-specific info (that is info, you want to keep
+# between two GIMP sessions).  You are not supposed to edit it manually, but
+# of course you can do.  The sessionrc will be entirely rewritten every time
+# you quit GIMP.  If this file isn't found, defaults are used.
+
+(session-info "dock" "dock"
+    (position 1154 24)
+    (size 210 709)
+    (open-on-exit)
+    (aux-info
+        (show-image-menu "true")
+        (follow-active-image "true"))
+    (dock
+        (book
+            (current-page 0)
+            (dockable "gimp-layer-list"
+                (tab-style icon)
+                (preview-size 32))
+            (dockable "gimp-channel-list"
+                (tab-style icon)
+                (preview-size 32))
+            (dockable "gimp-vectors-list"
+                (tab-style icon)
+                (preview-size 32))
+            (dockable "gimp-undo-history"
+                (tab-style icon)))
+        (book
+            (position 359)
+            (current-page 0)
+            (dockable "gimp-brush-grid"
+                (tab-style preview))
+            (dockable "gimp-pattern-grid"
+                (tab-style preview))
+            (dockable "gimp-gradient-list"
+                (tab-style preview)))))
+(session-info "toplevel" "gimp-file-open-location-dialog"
+    (position 48 24))
+(session-info "toplevel" "gimp-file-open-dialog"
+    (position 269 76)
+    (size 1010 663))
+(session-info "toplevel" "gimp-scale-tool-dialog"
+    (position 47 0))
+(session-info "toplevel" "gimp-file-save-dialog"
+    (position 332 76)
+    (size 1010 663))
+(session-info "toplevel" "gimp-image-new-dialog"
+    (position 491 221))
+(session-info "toplevel" "gimp-toolbox-color-dialog"
+    (position 47 0))
+(session-info "toplevel" "gimp-colorize-tool-dialog"
+    (position 127 193))
+(session-info "toplevel" "gimp-hue-saturation-tool-dialog"
+    (position 404 42))
+(session-info "toplevel" "gimp-text-tool-dialog"
+    (position 842 402)
+    (size 251 183))
+(session-info "toplevel" "gimp-color-balance-tool-dialog"
+    (position 496 109))
+(session-info "toplevel" "gimp-brightness-contrast-tool-dialog"
+    (position 367 443))
+(session-info "toolbox" "dock"
+    (position 48 26)
+    (size 238 713)
+    (open-on-exit)
+    (dock
+        (book
+            (current-page 0)
+            (dockable "gimp-tool-options"
+                (tab-style icon)))))
+(session-info "display" "gimp-empty-image-window"
+    (position 364 139)
+    (size 234 166))
+
+(last-tip-shown 33)
+
+# end of sessionrc
