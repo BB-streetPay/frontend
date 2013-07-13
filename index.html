@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <title>Street Pay</title>
+  <link rel="stylesheet" type="text/css" href="lib/lungo/lungo.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="lib/lungo/lungo.icon.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="lib/lungo/lungo.theme.css" media="all" />
+</head>
+<body class="app">
+    <section id="main" data-transition="">
+        
+        <header data-title="Street Pay - Project" class="extended"></header>
+        
+        <!--<nav class="groupbar">
+
+            <a href="#usersArticle" data-router="article" data-icon="users" class="active"
+                data-title="Street Pay - Users">Users</a>
+
+            <a href="#editArticle" data-router="article" data-icon="pencil"
+                data-title="Street Pay - Edit">Edit</a>
+
+            <a href="#deleteArticle" data-router="article" data-icon="remove"
+                data-title="Street Pay - Delete">Delete</a>
+        </nav>-->
+        
+        <footer>
+            <nav>
+                <a href="#descriptionArticle" data-router="article" data-icon="quote-left" class="active"></a>
+                <a href="#payArticle" data-router="article" data-icon="money"></a>
+            </nav>
+        </footer>
+
+        <article id="descriptionArticle" class="active list indented scroll">
+
+            description
+
+        </article>
+
+        <article id="payArticle" class="list indented scroll">
+
+            pay
+
+        </article>
+
+    </section>
+
+    <!-- Lungo - Dependencies -->
+    <script src="lib/quo/quo.js"></script>
+    <script src="lib/lungo/lungo.js"></script>
+    <!-- Lungo - Sandbox App -->
+    <script>
+        Lungo.init();
+    </script>
+    <script src="js/util.js"></script>
+	<script src="js/project.js"></script>
+</body>
+</html>
